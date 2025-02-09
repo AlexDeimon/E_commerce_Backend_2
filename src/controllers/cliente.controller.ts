@@ -15,7 +15,7 @@ class ClienteController {
         if (_id.length > 12 || _id.length < 10) {
             return 'El id debe contener entre 10 y 12 caracteres numéricos';
         }
-        if (!/^[a-zA-Z]+$/.test(nombre) || !/^[a-zA-Z]+$/.test(apellidos)) {
+        if (!/^[a-zA-Z\s]+$/.test(nombre) || !/^[a-zA-Z\s]+$/.test(apellidos)) {
             return 'El nombre y apellidos solo pueden contener caracteres alfabéticos';
         }
         if (!/^[0-9]+$/.test(telefono)) {
